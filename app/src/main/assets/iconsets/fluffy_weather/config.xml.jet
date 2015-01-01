@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+Weather conditions:
+ 0 = UNKOWN
+ 1 = STORM
+ 2 = THUNDERSTORM
+ 3 = DRIZZLE
+ 4 = RAIN
+ 5 = SHOWERS 
+ 6 = FLURRIES
+ 7 = RAINANDSNOW
+ 8 = SNOW
+ 9 = HAIL
+10 = FOG 
+11 = HAZE 
+12 = WIND
+13 = PARTLY_CLOUDY
+14 = MOSTLY_CLOUDY
+15 = CLEAR 
+16 = FAIR
+-->
+<config>
+  <title>Fluffy Weather Icons</title>
+  <description>comic-style weather icons</description>
+  <icons>icons</icons>
+  <demo>weather-few-clouds-day.png</demo>
+  <default>weather-none-available.png</default>
+  <mode value="#WCCODE#">Current weather</mode>
+  <mode value="#W0CODE#">Today's weather</mode>
+  <mode value="#W1CODE#">Tomorrow's weather</mode>
+  <mode value="#W2CODE#">2 days weather</mode>
+  <mode value="#W3CODE#">3 days weather</mode>
+  <mode value="#W4CODE#">4 days weather</mode>
+  <mode value="#W5CODE#">5 days weather</mode>
+  <mode value="#W6CODE#">6 days weather</mode>
+  <mode value="#W7CODE#">7 days weather</mode>
+  <!-- Nightly icons block will be skipped entirely if his conditions do not match -->
+  <condition>
+    <!-- We just check if sunrise hour is greater than current -->
+    <test>#ARHH#&gt;#DHH#</test>
+    <!-- Or if sunset if minor than current -->
+    <test>#ASHH#&lt;#DHH#</test>
+	<!-- Storm / Thunder Storm -->
+	<condition>
+      <test>#MODE#=1</test>
+	  <test>#MODE#=2</test>
+      <image>weather-storm-night.png</image>
+    </condition>
+	<condition>
+	  <!-- Drizzle / Rain-->
+	  <test>#MODE#=3</test>
+	  <test>#MODE#=4</test>
+	  <image>weather-showers-scattered-night.png</image>
+	</condition>
+	<condition>
+      <!-- Showers -->
+      <test>#MODE#=5</test>
+      <image>weather-showers-night.png</image>
+    </condition>
+	<condition>
+	  <!-- Flurries -->
+	  <test>#MODE#=6</test>
+	  <image>weather-snow-scattered-night.png</image>
+	</condition>
+	<condition>
+	  <!-- Rain and Snow -->
+	  <test>#MODE#=7</test>
+	  <image>weather-snow-rain-night.png</image>
+	</condition>
+	<condition>
+	  <!-- Snow -->
+	  <test>#MODE#=8</test>
+	  <image>weather-snow-night.png</image>
+	</condition>
+	<condition>
+	  <!-- Hail -->
+	  <test>#MODE#=9</test>
+	  <image>weather-hail-night.png</image>
+	</condition>
+	<condition>
+	  <!-- Fog / Haze -->
+	  <test>#MODE#=10</test>
+	  <test>#MODE#=11</test>
+	  <image>weather-mist-night.png</image>
+	</condition>
+	<condition>
+	  <!-- Wind -->
+	  <test>#MODE#=12</test>
+	  <image>weather-wind-night.png</image>
+	</condition>	
+	<condition>
+	  <!-- Partly cloudy -->
+	  <test>#MODE#=13</test>
+	  <image>weather-few-clouds-night.png</image>
+	</condition>
+    <condition>
+      <!-- Mostly Cloudy -->
+      <test>#MODE#=14</test>
+      <image>weather-clouds-night.png</image>
+    </condition>
+    <condition>
+	  <!-- Fair/Clear -->
+	  <test>#MODE#=15</test>
+      <test>#MODE#=16</test>
+      <image>weather-clear-night.png</image>
+	</condition>
+  </condition>
+  <!-- Daily conditions (parser will arrive here if it did not catch anything in night block) -->
+  <condition>
+    <test>#MODE#=1</test>
+    <test>#MODE#=2</test>
+    <image>weather-storm-day.png</image>
+  </condition>
+  <condition>
+    <!-- Drizzle / Rain-->
+    <test>#MODE#=3</test>
+    <test>#MODE#=4</test>
+    <image>weather-showers-scattered-day.png</image>
+  </condition>
+  <condition>
+    <!-- Showers -->
+    <test>#MODE#=5</test>
+    <image>weather-showers-day.png</image>
+  </condition>
+  <condition>
+    <!-- Flurries -->
+    <test>#MODE#=6</test>
+    <image>weather-snow-scattered-day.png</image>
+  </condition>
+  <condition>
+    <!-- Rain and Snow -->
+    <test>#MODE#=7</test>
+    <image>weather-snow-rain-day.png</image>
+  </condition>
+  <condition>
+    <!-- Snow -->
+    <test>#MODE#=8</test>
+    <image>weather-snow-day.png</image>
+  </condition>
+  <condition>
+    <!-- Hail -->
+    <test>#MODE#=9</test>
+    <image>weather-hail-day.png</image>
+  </condition>
+  <condition>
+    <!-- Fog / Haze -->
+    <test>#MODE#=10</test>
+    <test>#MODE#=11</test>
+    <image>weather-mist-day.png</image>
+  </condition>
+  <condition>
+    <!-- Wind -->
+    <test>#MODE#=12</test>
+    <image>weather-wind-day.png</image>
+  </condition>	
+  <condition>
+    <!-- Partly cloudy -->
+    <test>#MODE#=13</test>
+    <image>weather-few-clouds-day.png</image>
+  </condition>
+  <condition>
+    <!-- Mostly Cloudy -->
+    <test>#MODE#=14</test>
+    <image>weather-clouds-day.png</image>
+  </condition>
+  <condition>
+    <!-- Fair/Clear -->
+    <test>#MODE#=15</test>
+    <test>#MODE#=16</test>
+    <image>weather-clear-day.png</image>
+  </condition>
+</config>

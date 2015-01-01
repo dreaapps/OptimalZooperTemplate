@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="UnusedResources">
+    <string name="zooper_pack_name">Optimal Zooper Template</string>
+    <string name="zooper_pack_author">Optimal  Designs</string>
+    <string name="zooper_pack_desc">An Optimized Zooper Template</string>
+    <integer name="zooper_pack_allowsave">1</integer>
+    <drawable name="zooper_pack_icon">@drawable/ic_launcher</drawable>
+</resources>

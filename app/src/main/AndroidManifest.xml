@@ -1,0 +1,19 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" package="optimalzooper.template">
+<application
+    android:allowBackup="true"
+    android:label="@string/zooper_pack_name"
+    android:icon="@drawable/ic_launcher">
+<activity
+    android:name=".ZooperTemplate"
+    android:exported="true" >
+    <intent-filter>
+        <action
+            android:name="org.zooper.zw.TEMPLATES"/>
+    </intent-filter>
+</activity>
+<provider
+    android:name=".TemplateProvider"
+    android:authorities="optimalzooper.template.zwprovider"
+    tools:ignore="ExportedContentProvider" />
+</application>
+</manifest>
